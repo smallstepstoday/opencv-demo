@@ -6,6 +6,13 @@ from PIL import Image
 from io import BytesIO
 import base64
 
+st.set_page_config(
+    page_title="Cataluma OpenCV Demo App",
+    page_icon=":camera:",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 # AI Operations
 face_detection = st.Page("face-detection/face-detection.py", title="Face Detection")
 
