@@ -4,11 +4,10 @@ import numpy as np
 from PIL import Image
 from io import BytesIO
 import base64
-    
+
 # Create application title and file uploader widget.
 st.title("Deep Learning based Face Detection")
-img_file_buffer = st.file_uploader("Choose a file", type=['jpg', 'jpeg', 'png'])
-
+uploaded_file = st.file_uploader("Choose a file", type=['jpg', 'jpeg', 'png'])
 
 # Function for detecting facses in an image.
 def detectFaceOpenCVDnn(net, frame):
@@ -60,9 +59,9 @@ def get_image_download_link(img, filename, text):
 
 net = load_model()
 
-if img_file_buffer is not None:
+if uploaded_file is not None:
     # Read the file and convert it to opencv Image.
-    raw_bytes = np.asarray(bytearray(img_file_buffer.read()), dtype=np.uint8)
+    raw_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     # Loads image in a BGR channel order.
     image = cv2.imdecode(raw_bytes, cv2.IMREAD_COLOR)
 

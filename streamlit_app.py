@@ -13,16 +13,18 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# AI Operations
-face_detection = st.Page("face-detection/face-detection.py", title="Face Detection")
+# Computer Vision
+face_detection = st.Page("vision/face-detection.py", title="Face Detection")
+edge = st.Page("vision/edge.py", title="Edge Detection")
 
 # Photographic Filters
 blur = st.Page("photographic/blur.py", title="Blur")
 sharp = st.Page("photographic/sharpen.py", title="Sharpen")
+noise = st.Page("photographic/noise.py", title="Noise")
 
 pg = st.navigation({
-    "AI Operations": [face_detection],
-    "Photographic Filters": [blur, sharp]
+    "Computer Vision": [face_detection, edge],
+    "Photographic Filters": [blur, sharp, noise]
 })
 pg.run()
 
