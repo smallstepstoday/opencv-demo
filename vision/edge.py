@@ -1,4 +1,3 @@
-from annotated_types import T
 import streamlit as st
 import cv2
 import numpy as np
