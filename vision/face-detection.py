@@ -43,7 +43,7 @@ def process_detections(frame, detections, conf_threshold=0.5):
 # Function to load the DNN model.
 @st.cache_resource()
 def load_model():
-    modelFile = "face-detection/res10_300x300_ssd_iter_140000_fp16.caffemodel"
+    modelFile = "vision/res10_300x300_ssd_iter_140000_fp16.caffemodel"
     configFile = "deploy.prototxt"
     net = cv2.dnn.readNetFromCaffe(configFile, modelFile)
     return net
