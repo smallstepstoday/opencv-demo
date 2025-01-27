@@ -80,6 +80,7 @@ if img_file_buffer is not None:
             mask = np.uint8(mask)
             mask = cv2.resize(mask, (w, h))
 
+    st.header("Step 3: Select the mode for inpainting")
     option = st.selectbox("Mode", ["None", "Telea", "Navier-Stokes", "Compare Both"])
     
     if option == 'Telea':
