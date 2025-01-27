@@ -16,6 +16,7 @@ st.set_page_config(
 # Computer Vision
 face_detection = st.Page("vision/face-detection.py", title="Face Detection")
 edge = st.Page("vision/edge.py", title="Edge Detection")
+inpaint = st.Page("vision/inpainting.py", title="Image Inpainting")
 
 # Photographic Filters
 blur = st.Page("photographic/blur.py", title="Blur")
@@ -23,7 +24,7 @@ sharp = st.Page("photographic/sharpen.py", title="Sharpen")
 noise = st.Page("photographic/noise.py", title="Noise")
 
 pg = st.navigation({
-    "Computer Vision": [face_detection, edge],
+    "Computer Vision": [face_detection, edge, inpaint],
     "Photographic Filters": [blur, sharp, noise]
 })
 pg.run()

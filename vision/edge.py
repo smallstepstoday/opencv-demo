@@ -2,9 +2,9 @@ import streamlit as st
 import cv2
 import numpy as np
 
-st.title("Photographic Filters: Noise")
+st.title("Edge Detection")
 st.markdown("""
-        The following filters are demonstrated below:
+        The following edge detection techniques are demonstrated below:
         - Sobel Edge Detection
         - Canny Edge Detection
         """)
